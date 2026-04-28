@@ -1,0 +1,227 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at center, #101026 0%, #020205 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ================= LAYOUT ================= */
+.page-container,
+.prediction-page {
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* ================= GLASS CARD ================= */
+.glass-card {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(15px);
+  border: 1px solid #7000ff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(112, 0, 255, 0.3);
+}
+
+/* ================= INPUT ================= */
+.glass-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #00f2ff;
+  background: rgba(255, 255, 255, 0.05);
+  color: #00f2ff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.glass-input:focus {
+  box-shadow: 0 0 15px #00f2ff;
+}
+
+/* ================= BUTTONS ================= */
+.predict-btn,
+.back-btn-bottom {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.predict-btn {
+  border: 2px solid #39ff14;
+  color: #39ff14;
+  background: transparent;
+}
+
+.predict-btn:hover {
+  background: #39ff14;
+  color: #000;
+  box-shadow: 0 0 25px #39ff14;
+}
+
+.back-btn-bottom {
+  border: 1px solid #00f2ff;
+  color: #00f2ff;
+  background: transparent;
+}
+
+.back-btn-bottom:hover {
+  background: #00f2ff;
+  color: #000;
+  box-shadow: 0 0 20px #00f2ff;
+}
+
+/* ================= CARDS ================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.mini-card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff00ff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.mini-card strong {
+  color: #ff00ff;
+}
+
+/* ================= TRAFFIC ================= */
+.status-card {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid;
+}
+
+.low {
+  color: #39ff14;
+  border-color: #39ff14;
+}
+
+.medium {
+  color: #ffea00;
+  border-color: #ffea00;
+}
+
+.high {
+  color: #ff3131;
+  border-color: #ff3131;
+}
+
+/* ================= CHART ================= */
+.chart-box-large {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* ================= TABLE ================= */
+.neon-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.neon-table th {
+  border-bottom: 2px solid #00f2ff;
+  color: #00f2ff;
+  padding: 10px;
+}
+
+.neon-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================= LOGIN ================= */
+.login-box {
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #7000ff;
+  text-align: center;
+}
+
+.login-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #00f2ff;
+  background: rgba(255, 255, 255, 0.05);
+  color: #00f2ff;
+}
+
+/* ================= PERFORMANCE GRID ================= */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .performance-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Ensure the parent container takes up the full screen height */
+  .parent-container {
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    min-height: 100vh;
+    /* Uses 100% of the viewport height */
+    background-color: #0b0b1a;
+    /* Match your dark background color */
+  }
+
+  /* Optional: Slight adjustment to your existing card style */
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    /* Prevents it from getting too wide on desktop */
+    padding: 2rem;
+    /* Keep your existing border-radius and background styles here */
+  }
+
+}
